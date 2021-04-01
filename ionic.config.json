@@ -1,0 +1,7 @@
+{
+  "name": "joblac",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
