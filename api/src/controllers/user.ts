@@ -18,13 +18,13 @@ exports.register = async (req: any, res: any) => {
   const err = await validate(userValid);
   if (err.length > 0) {
     let errors = {};
-    err.map((oneError) => {
+    /*err.map((oneError) => {
       errors = {
         ...errors,
         [oneError.property]:
           oneError.constraints[Object.keys(oneError.constraints)[0]],
       };
-    });
+    });*/
     return { status: 412, data: errors };
   }
 

@@ -5,8 +5,9 @@ const port = 3333;
 const userRoutes = require("./src/routes/user");
 
 const app = express();
-app.use(cors());
+//app.use(cors());
 app.use(bodyParser.json());
+app.use(cors);
 
 app.use("/api/user", userRoutes);
 

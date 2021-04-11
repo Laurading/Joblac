@@ -8,6 +8,7 @@
     "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "watch": true
+    "watch": true,
+    "experimentalDecorators": true
   }
 }
