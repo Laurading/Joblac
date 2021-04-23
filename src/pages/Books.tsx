@@ -8,30 +8,74 @@ import {
   IonLabel,
   IonIcon,
 } from "@ionic/react";
+import React, { useState } from "react";
 
-import { chevronForwardOutline } from "ionicons/icons";
+import OneBook from "../components/OneBook";
+import {
+  chevronForwardOutline,
+  chevronBackOutline,
+  book,
+} from "ionicons/icons";
+import BookList from "../components/BookList";
 
-import React from "react";
 import CategoriesContainer from "../components/CategoriesContainer";
 
-const Books: React.FC = () => {
+const Categories: React.FC = () => {
+  const [catSel, setCatSel] = useState("");
+  const [bookSel, setBookSel] = useState({ id: null, titre: "" });
+
+  const handleCat = (cat: string) => {
+    setCatSel(cat);
+  };
+
+  const selectBook = (book: any) => {
+    setBookSel(book);
+  };
+
+  const removeCat = () => {
+    setCatSel("");
+  };
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Categories de livre </IonTitle>
+          {catSel === "" && <IonTitle>Categories de livre </IonTitle>}
+          {catSel !== "" && !bookSel.id && (
+            <>
+              <IonIcon
+                icon={chevronBackOutline}
+                onClick={removeCat}
+                slot="start"
+              />
+              <IonTitle>{catSel}</IonTitle>
+            </>
+          )}
+          {bookSel.id && (
+            <>
+              <IonIcon
+                icon={chevronBackOutline}
+                onClick={removeCat}
+                slot="start"
+              />
+              <IonTitle>{bookSel.titre}</IonTitle>
+            </>
+          )}
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Books</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <CategoriesContainer />
+        {catSel === "" && <CategoriesContainer handleCat={handleCat} />}
+        {catSel !== "" && !bookSel.id && (
+          <BookList
+            catSel={catSel}
+            handleBack={removeCat}
+            selectBook={selectBook}
+          />
+        )}
+        {bookSel.id && <OneBook book={bookSel} />}
       </IonContent>
     </IonPage>
   );
 };
 
-export default Books;
+export default Categories;

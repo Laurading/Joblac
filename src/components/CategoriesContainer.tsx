@@ -1,13 +1,20 @@
-import { categories } from "../data/data.json";
+import React, { useState } from "react";
+import { categories, books } from "../data/data";
 import { IonItem, IonLabel, IonIcon } from "@ionic/react";
-import { chevronForwardOutline } from "ionicons/icons";
-interface ContainerProps {}
+import { chevronBackOutline, chevronForwardOutline } from "ionicons/icons";
+import BookList from "../components/BookList";
 
-const CategoriesContainer: React.FC<ContainerProps> = () => {
-  const cat = Object.keys(categories);
-  const categoriesList = cat.map((category: string) => {
+interface ContainerProps {
+  handleCat: any;
+}
+
+const CategoriesContainer: React.FC<ContainerProps> = ({ handleCat }) => {
+  const categoriesList = categories.map((category: string) => {
+    const handleClick = () => {
+      handleCat(category);
+    };
     return (
-      <IonItem>
+      <IonItem key={category} onClick={handleClick}>
         <IonLabel>{category}</IonLabel>
         <IonIcon icon={chevronForwardOutline} slot="end" />
       </IonItem>

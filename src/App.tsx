@@ -20,6 +20,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import Books from "./pages/Books";
+import Subcategories from "./pages/Subcategories";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -45,6 +46,9 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route exact path="/books/:category">
+            <Subcategories />
+          </Route>
           <Route exact path="/home">
             <Home />
           </Route>
