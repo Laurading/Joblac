@@ -20,6 +20,8 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import Books from "./pages/Books";
+import Login from "./pages/Login";
+import Subscribe from "./pages/Subscribe";
 import Subcategories from "./pages/Subcategories";
 
 /* Core CSS required for Ionic components to work properly */
@@ -60,6 +62,12 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/account">
             <Account />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/subscribe">
+            <Subscribe />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />

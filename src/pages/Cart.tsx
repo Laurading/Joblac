@@ -7,10 +7,17 @@ import {
   IonItem,
   IonLabel,
 } from "@ionic/react";
+import React, { useReducer } from "react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Home.css";
+import cartReducer from "../reducers/cart";
 
 const Cart: React.FC = () => {
+  const initialState = {
+    books: [],
+  };
+  const [state, dispatch] = useReducer(cartReducer, initialState);
+  console.log(state);
   return (
     <IonPage>
       <IonHeader>

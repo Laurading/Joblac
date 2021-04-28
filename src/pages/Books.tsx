@@ -36,6 +36,10 @@ const Categories: React.FC = () => {
     setCatSel("");
   };
 
+  const removeBook = () => {
+    setBookSel({ id: null, titre: "" });
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -55,7 +59,7 @@ const Categories: React.FC = () => {
             <>
               <IonIcon
                 icon={chevronBackOutline}
-                onClick={removeCat}
+                onClick={removeBook}
                 slot="start"
               />
               <IonTitle>{bookSel.titre}</IonTitle>

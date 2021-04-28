@@ -12,7 +12,7 @@ export const books = [
   {
     id: 1,
     titre: "Grizzly",
-    auteurr: "Martin Jenkins",
+    auteur: "Martin Jenkins",
     parution: "03/02/2015",
     editeur: "Konti",
     prix: "9,99€",
