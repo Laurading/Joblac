@@ -44,7 +44,7 @@ const Book: React.FC = () => {
               <p>Genre: {book.genre}</p>
               <p>date de parution: {book.parution}</p>
               <p>editeur: {book.editeur}</p>
-              <p>{book.prix}</p>
+              <p>{book.prix} €</p>
               <button onClick={addCart}>Ajouter au panier</button>
             </>
           )}
