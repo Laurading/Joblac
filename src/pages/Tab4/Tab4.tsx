@@ -31,9 +31,12 @@ const Tab4: React.FC = () => {
 
   return (
     <IonPage>
-      <Header/>
       <IonContent>
-        <div className="background"></div>
+        <div className="background">
+          <div className={styles['orange']}>
+            <p className={styles['title-tab-2']}>MON COMPTE</p>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );

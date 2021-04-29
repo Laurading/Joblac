@@ -25,9 +25,12 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <Header/>
       <IonContent>
-        <div className="background"></div>
+        <div className="background">
+          <div className={styles['orange']}>
+            <p className={styles['title-tab-2']}>PANIER</p>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );

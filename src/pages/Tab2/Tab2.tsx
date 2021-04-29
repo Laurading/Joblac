@@ -6,12 +6,15 @@ import {
   useIonViewDidLeave,
   IonSearchbar,
 } from "@ionic/react";
+import { Route } from 'react-router-dom';
 import styles from "./Tab2.module.css";
 import Categories from "../../components/Categories";
 
 const Tab2: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [searchText, setSearchText] = useState('');
+
+  const handleCat = () => {}
 
   useIonViewDidEnter(() => {
     console.log("useIonViewDidEnter");

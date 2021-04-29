@@ -27,6 +27,8 @@ ion-label {
 
 p {
   margin: 0;
+  font-weight: 400;
+  font-family: "Helvetica Neue";
 }
 
 .sc-ion-searchbar-md-h {
