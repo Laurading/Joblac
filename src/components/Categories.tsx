@@ -1,38 +1,19 @@
-import SingleCategorie from './SingleCategorie';
-import React, { useState } from "react";
-import { categories, books } from "../data/data";
-import { IonItem, IonLabel, IonIcon } from "@ionic/react";
-import { chevronBackOutline, chevronForwardOutline } from "ionicons/icons";
-import styles from "./Categories.module.css"
-
-
+import React from "react";
+import { categories } from "../data/data";
+import { IonItem, IonIcon } from "@ionic/react";
+import { chevronForwardOutline } from "ionicons/icons";
+import styles from "./Categories.module.css";
 
 const Categories: React.FC = () => {
-    // const [categories, setCategories] = useState([null])
-    // fetch('http://localhost:8100/assets/data/categories.json')  // call API
-    //     .then(response => response.json())
-    //     .then(json => setCategories(json))
-
-    // if (categories) {
-    const categoriesList = categories.map((category: string) => {
-        
-        return (
-            <IonItem routerLink={'/bookList'} key={category}>
-                <p className={styles['padding']}>{category}</p>
-                <IonIcon icon={chevronForwardOutline} slot="end" />
-            </IonItem>
-        );
-    });
+  const categoriesList = categories.map((category: string) => {
     return (
-
-        <div>
-            {categoriesList}
-        </div>
-
-
-    )
-    // }
-    // return null
-}
+      <IonItem routerLink={`/booklist/${category}`} key={category}>
+        <p className={styles["padding"]}>{category}</p>
+        <IonIcon icon={chevronForwardOutline} slot="end" />
+      </IonItem>
+    );
+  });
+  return <div>{categoriesList}</div>;
+};
 
 export default Categories;
