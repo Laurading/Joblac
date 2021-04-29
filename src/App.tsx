@@ -1,7 +1,19 @@
+import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import {
+  IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import Tab1 from './pages/Tab1/Tab1';
+import Tab2 from './pages/Tab2/Tab2';
+import Tab3 from './pages/Tab3/Tab3';
+import Tab4 from './pages/Tab4/Tab4';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,17 +34,40 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import './App.css';
+import BookList from './pages/Tab2/BookList';
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route path="/tab1" component={Tab1} exact={true} />
+          <Route path="/tab2" component={Tab2} exact={true} />
+          <Route path="/tab3" component={Tab3} />
+          <Route path="/tab4" component={Tab4} />
+          <Route path="/bookList" component={BookList}/>
+          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="tab1" href="/tab1">
+            <IonIcon src="./assets/svg/home.svg" />
+            <IonLabel>Accueil</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab2" href="/tab2">
+            <IonIcon src="./assets/svg/search.svg" />
+            <IonLabel>Recherche</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab3" href="/tab3">
+            <IonIcon src="./assets/svg/cart.svg" />
+            <IonLabel>Panier</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon src="./assets/svg/profil.svg" />
+            <IonLabel>Compte</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
