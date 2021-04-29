@@ -10,13 +10,12 @@ import {
   IonRow,
   IonTitle,
   IonToolbar,
-  IonItemOption,
-  IonRouterOutlet,
 } from "@ionic/react";
 import { Redirect, Route } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import ShowErrorForm from "../components/ShowErrorForm";
+import styles from "./Account.module.css";
 
 const Subscribe: React.FC = () => {
   const initialData = {
@@ -71,12 +70,12 @@ const Subscribe: React.FC = () => {
         <Redirect to="/login" />
       ) : (
         <IonPage>
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Inscription</IonTitle>
-            </IonToolbar>
-          </IonHeader>
           <IonContent>
+            <div className="background">
+              <div className={styles["orange"]}>
+                <p className={styles["title-tab-2"]}>Inscription</p>
+              </div>
+            </div>
             <IonRow>
               <IonCol size="12">
                 <IonItem>

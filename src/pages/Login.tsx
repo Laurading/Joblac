@@ -14,6 +14,7 @@ import {
 import { Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./Account.module.css";
 import { setErrorHandler } from "ionicons/dist/types/stencil-public-runtime";
 
 const Login: React.FC = () => {
@@ -48,12 +49,12 @@ const Login: React.FC = () => {
     <>
       {redirect && <Redirect to="/account" />}
       <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Login</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonContent>
+          <div className="background">
+            <div className={styles["orange"]}>
+              <p className={styles["title-tab-2"]}>Login</p>
+            </div>
+          </div>
           <IonRow>
             <IonCol size="12">
               <IonItem>

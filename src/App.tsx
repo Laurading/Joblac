@@ -14,10 +14,8 @@ import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
-import Books from "./pages/Books";
 import Login from "./pages/Login";
 import Subscribe from "./pages/Subscribe";
-import Subcategories from "./pages/Subcategories";
 import "./App.css";
 
 /* Core CSS required for Ionic components to work properly */
@@ -50,7 +48,6 @@ const App: React.FC = () => {
     books,
     setBooks,
   };
-  console.log("les books", books);
 
   return (
     <CartContext.Provider value={cartContextValue}>

@@ -11,6 +11,7 @@ import {
   IonToolbar,
   IonTitle,
 } from "@ionic/react";
+import styles from "./Home.module.css";
 
 const Home: React.FC = () => {
   return (

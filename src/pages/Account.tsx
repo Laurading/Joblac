@@ -8,6 +8,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
+import styles from "./Account.module.css";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 
@@ -63,17 +64,12 @@ const Account: React.FC = () => {
 
       {user.email !== "" && (
         <IonPage>
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Mon compte</IonTitle>
-            </IonToolbar>
-          </IonHeader>
           <IonContent fullscreen>
-            <IonHeader collapse="condense">
-              <IonToolbar>
-                <IonTitle size="large">Account</IonTitle>
-              </IonToolbar>
-            </IonHeader>
+            <div className="background">
+              <div className={styles["orange"]}>
+                <p className={styles["title-tab-2"]}>MON COMPTE</p>
+              </div>
+            </div>
             <IonItem>
               <IonLabel>{user.email}</IonLabel>
             </IonItem>
