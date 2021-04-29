@@ -12,6 +12,7 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 const Account: React.FC = () => {
+  
   const [redirect, setRedirect] = useState(false);
   const [user, setUser] = useState({
     email: "",

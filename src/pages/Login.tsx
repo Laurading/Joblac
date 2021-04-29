@@ -15,6 +15,7 @@ import { Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import { setErrorHandler } from "ionicons/dist/types/stencil-public-runtime";
+import styles from "./Login.module.css"
 
 const Login: React.FC = () => {
   const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
@@ -48,42 +49,43 @@ const Login: React.FC = () => {
     <>
       {redirect && <Redirect to="/account" />}
       <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Login</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent>
-          <IonRow>
-            <IonCol size="12">
-              <IonItem>
-                <IonLabel>Email:</IonLabel>
-                <IonInput
-                  type="text"
-                  name="email"
-                  value={dataLogin.email}
-                  onIonChange={handleChange}
-                />
-              </IonItem>
-              <IonItem>
-                <IonLabel>Mot de passe:</IonLabel>
-                <IonInput
-                  type="password"
-                  name="password"
-                  value={dataLogin.password}
-                  onIonChange={handleChange}
-                />
-              </IonItem>
-              {error !== "" && <p>{error}</p>}
-            </IonCol>
-            <IonCol size="12">
-              <IonButton type="submit" onClick={handleSubmit}>
-                Se connecter
-              </IonButton>
-            </IonCol>
-          </IonRow>
-          <a href="/subscribe">Vous n'avez pas de compte ? Inscrivez vous</a>
-        </IonContent>
+        <div className="background">
+          <div className={styles['orange']}>
+            <p className={styles['title-tab-2']}>CONNEXION</p>
+          </div>
+          <IonContent>
+            <IonRow>
+              <IonCol size="12">
+                <IonItem>
+                  <IonLabel>Email:</IonLabel>
+                  <IonInput
+                    type="text"
+                    name="email"
+                    value={dataLogin.email}
+                    onIonChange={handleChange}
+                  />
+                </IonItem>
+                <IonItem>
+                  <IonLabel>Mot de passe:</IonLabel>
+                  <IonInput
+                    type="password"
+                    name="password"
+                    value={dataLogin.password}
+                    onIonChange={handleChange}
+                  />
+                </IonItem>
+                {error !== "" && <p>{error}</p>}
+              </IonCol>
+              <IonCol size="12">
+                <IonButton type="submit" onClick={handleSubmit}>
+                  Se connecter
+                </IonButton>
+              </IonCol>
+            </IonRow>
+            <a href="/subscribe">Vous n'avez pas de compte ? Inscrivez vous</a>
+          </IonContent>
+        </div>
+
       </IonPage>
     </>
   );
