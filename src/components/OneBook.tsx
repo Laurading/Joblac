@@ -1,20 +1,16 @@
-import React, { MouseEventHandler, useState, useReducer } from "react";
-import cartReducer from "../reducers/cart";
-import { books } from "../data/data";
-import { IonItem, IonLabel, IonIcon } from "@ionic/react";
-import { chevronBackOutline } from "ionicons/icons";
+import React, { useContext } from "react";
+import CartContext from "../contexts/CartContext";
+
 interface ContainerProps {
   book: any;
 }
 
 const CategoriesContainer: React.FC<ContainerProps> = ({ book }) => {
-  const initialState = { books: [] };
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-  console.log(state);
-
+  const { books, updateBooks } = useContext(CartContext);
   const addCart = () => {
-    console.log(book);
-    dispatch({ type: "addBook", data: book });
+    const newBookList = books;
+    newBookList.push(book);
+    updateBooks(newBookList);
   };
 
   return (

@@ -77,9 +77,6 @@ const Login: React.FC = () => {
               {error !== "" && <p>{error}</p>}
             </IonCol>
             <IonCol size="12">
-              <p>Mot de passe oublié</p>
-            </IonCol>
-            <IonCol size="12">
               <IonButton type="submit" onClick={handleSubmit}>
                 Se connecter
               </IonButton>

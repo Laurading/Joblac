@@ -8,6 +8,7 @@ import {
   IonIcon,
   IonLabel,
 } from "@ionic/react";
+import React, { useState } from "react";
 import {
   home,
   cartOutline,
@@ -42,60 +43,71 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import CartContext from "./contexts/CartContext";
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/books/:category">
-            <Subcategories />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/books">
-            <Books />
-          </Route>
-          <Route exact path="/cart">
-            <Cart />
-          </Route>
-          <Route exact path="/account">
-            <Account />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/subscribe">
-            <Subscribe />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="home" href="/home">
-            <IonIcon icon={home} />
-            <IonLabel>Accueil</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="books" href="/books">
-            <IonIcon icon={searchOutline} />
-            <IonLabel>Livres</IonLabel>
-          </IonTabButton>
+const App: React.FC = () => {
+  const [books, setBooks] = useState([]);
 
-          <IonTabButton tab="cart" href="/cart">
-            <IonIcon icon={cartOutline} />
-            <IonLabel>Panier</IonLabel>
-          </IonTabButton>
+  const cartContextValue = {
+    books,
+    updateBooks: setBooks,
+  };
+  return (
+    <CartContext.Provider value={cartContextValue}>
+      <IonApp>
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route exact path="/books/:category">
+                <Subcategories />
+              </Route>
+              <Route exact path="/home">
+                <Home />
+              </Route>
+              <Route exact path="/books">
+                <Books />
+              </Route>
+              <Route exact path="/cart">
+                <Cart />
+              </Route>
+              <Route exact path="/account">
+                <Account />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/subscribe">
+                <Subscribe />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="home" href="/home">
+                <IonIcon icon={home} />
+                <IonLabel>Accueil</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="books" href="/books">
+                <IonIcon icon={searchOutline} />
+                <IonLabel>Livres</IonLabel>
+              </IonTabButton>
 
-          <IonTabButton tab="account" href="/account">
-            <IonIcon icon={personOutline} />
-            <IonLabel>Compte</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+              <IonTabButton tab="cart" href="/cart">
+                <IonIcon icon={cartOutline} />
+                <IonLabel>Panier</IonLabel>
+              </IonTabButton>
+
+              <IonTabButton tab="account" href="/account">
+                <IonIcon icon={personOutline} />
+                <IonLabel>Compte</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      </IonApp>
+    </CartContext.Provider>
+  );
+};
 
 export default App;

@@ -157,7 +157,7 @@ const Subscribe: React.FC = () => {
 
               <IonCol size="12">
                 <IonButton type="submit" onClick={handleSubmit}>
-                  Se connecter
+                  S'inscrire
                 </IonButton>
               </IonCol>
             </IonRow>

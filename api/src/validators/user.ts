@@ -1,57 +1,46 @@
-import {
-  ValidateIf,
-  Length,
-  IsNumber,
-  IsString,
-  IsEmail,
-} from "class-validator";
+import { Length, IsString, IsEmail, IsPostalCode } from "class-validator";
 export default class UserValidator {
   constructor(
     email: string,
-    username: string,
     password: string,
-    firstname: string,
-    lastname: string,
+    checkPassword: string,
     adress: string,
     city: string,
-    zipcode: number
+    zipcode: number,
+    username: string
   ) {
     this.email = email;
-    this.username = username;
     this.password = password;
-    this.firstname = firstname;
-    this.lastname = lastname;
     this.adress = adress;
+    this.checkPassword = checkPassword;
     this.city = city;
     this.zipcode = zipcode;
+    this.username = username;
   }
 
   @IsEmail()
   email: string;
 
-  @Length(3, 15)
-  @IsString()
-  username: string;
-
   @Length(8, 25)
+  @IsString()
   password: string;
 
-  @Length(3, 15)
+  @Length(8, 25)
   @IsString()
-  firstname: string;
-
-  @Length(3, 15)
-  @IsString()
-  lastname: string;
+  checkPassword: string;
 
   @Length(8, 55)
+  @IsString()
   adress: string;
 
   @Length(3, 25)
   @IsString()
   city: string;
 
-  @Length(5, 5)
-  @IsNumber()
+  @IsPostalCode("FR")
   zipcode: number;
+
+  @Length(4, 25)
+  @IsString()
+  username: string;
 }

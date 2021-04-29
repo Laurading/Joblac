@@ -6,18 +6,32 @@ import {
   IonToolbar,
   IonItem,
   IonLabel,
+  IonButton,
 } from "@ionic/react";
-import React, { useReducer } from "react";
-import ExploreContainer from "../components/ExploreContainer";
+import CartContext from "../contexts/CartContext";
+import React, { useContext, useState, useEffect } from "react";
 import "./Home.css";
-import cartReducer from "../reducers/cart";
 
 const Cart: React.FC = () => {
-  const initialState = {
-    books: [],
-  };
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-  console.log(state);
+  const { books, updateBooks } = useContext(CartContext);
+  const [total, setTotal] = useState(0);
+  console.log("jjj", books);
+  let booklist;
+  useEffect(() => {
+    console.log("bbb", books);
+    booklist = books.map((book: any) => {
+      setTotal(total + parseFloat(book.prix));
+      console.log("one", book);
+      return (
+        <IonItem key={book.titre}>
+          <IonLabel>
+            {book.titre} - {book.auteur}
+          </IonLabel>
+          <IonLabel>prix: {book.prix}</IonLabel>
+        </IonItem>
+      );
+    });
+  }, [books]);
   return (
     <IonPage>
       <IonHeader>
@@ -31,8 +45,9 @@ const Cart: React.FC = () => {
             <IonTitle size="large">Panier</IonTitle>
           </IonToolbar>
         </IonHeader>
+        {booklist}
 
-        <ExploreContainer />
+        <IonButton>Payer {total}€</IonButton>
       </IonContent>
     </IonPage>
   );

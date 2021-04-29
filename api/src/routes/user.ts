@@ -1,8 +1,10 @@
-const router = require("express").Router();
-//const router = express.Router();
 const userCtrl = require("../controllers/user");
-router.get("/", userCtrl.getAllUsers);
-router.get("/:email", userCtrl.getUser);
-router.post("/register", userCtrl.register);
+const routerUser = require("express").Router();
 
-module.exports = router;
+routerUser.post("/login", userCtrl.login);
+routerUser.post("/register", userCtrl.register);
+routerUser.get("/:id/:token", userCtrl.getUserById);
+routerUser.get("/:email", userCtrl.getUser);
+routerUser.get("/", userCtrl.getAllUsers);
+
+module.exports = routerUser;
