@@ -11,10 +11,10 @@ const Tab2 = () => {
       <IonContent>
         <div className="background">
           <div className={styles["orange"]}>
-            <IonSearchbar
+            {/* <IonSearchbar
               value={searchText}
               onIonChange={(e) => setSearchText(e.detail.value!)}
-            ></IonSearchbar>
+            ></IonSearchbar> */}
             <p className={styles["title-tab-2"]}>
               Quel genre de livre recherchez-vous?
             </p>

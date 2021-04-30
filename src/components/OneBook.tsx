@@ -5,7 +5,7 @@ interface ContainerProps {
   book: any;
 }
 
-const CategoriesContainer: React.FC<ContainerProps> = ({ book }) => {
+const OneBook: React.FC<ContainerProps> = ({ book }) => {
   const { books, updateBooks } = useContext(CartContext);
   const addCart = () => {
     const newBookList = books;
@@ -14,6 +14,7 @@ const CategoriesContainer: React.FC<ContainerProps> = ({ book }) => {
   };
 
   return (
+    
     <div>
       <p>{book.titre}</p>
       <p>Auteur: {book.auteur}</p>
@@ -26,4 +27,4 @@ const CategoriesContainer: React.FC<ContainerProps> = ({ book }) => {
   );
 };
 
-export default CategoriesContainer;
+export default OneBook;

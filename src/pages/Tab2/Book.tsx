@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./Book.module.css";
 import CartContext from "../../contexts/CartContext";
-import { IonPage, IonContent } from "@ionic/react";
 import { useParams } from "react-router";
+import { IonContent, IonPage, IonItem, IonLabel, IonHeader, IonTitle, IonToolbar, IonCol } from "@ionic/react";
 import { books } from "../../data/data";
 
 const Book: React.FC = () => {
@@ -14,6 +14,8 @@ const Book: React.FC = () => {
     parution: "",
     editeur: "",
     prix: "",
+    image: "",
+    description: ""
   });
 
   const { id }: any = useParams();
@@ -35,21 +37,60 @@ const Book: React.FC = () => {
   //const book = books.find((one: any) => one.id === parseInt(id, 10)) || "";
   return (
     <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>
+            <img src="././assets/img/Joblac.png" />
+          </IonTitle>
+        </IonToolbar>
+      </IonHeader>
+
       <IonContent>
-        <div>
-          {book.titre !== "" && (
-            <>
-              <p>{book.titre}</p>
-              <p>Auteur: {book.auteur}</p>
-              <p>Genre: {book.genre}</p>
-              <p>date de parution: {book.parution}</p>
-              <p>editeur: {book.editeur}</p>
-              <p>{book.prix} €</p>
-              <button onClick={addCart}>Ajouter au panier</button>
-            </>
-          )}
+        <div className="background">
+          <div>
+            {book.titre !== "" && (
+              <>
+                <div className={styles['form']}>
+                <IonItem>
+                    <p className={styles['title']}>{book.titre}</p>
+                  </IonItem>
+                  <IonItem>
+                    <img className={styles['img']} src={book.image} />
+                  </IonItem>
+                  
+                  <IonItem>
+                    <p className={styles['padding-input']}>Prix: {book.prix} €</p>
+                  </IonItem>
+
+                  <IonItem>
+                    <button className={styles['button']} onClick={addCart}>Ajouter au panier</button>
+                  </IonItem>
+                </div>
+
+                <div className={styles['form']}>
+                  <IonItem>
+                    <p className={styles['padding-input']}>Auteur: {book.auteur}</p>
+                  </IonItem>
+                  <IonItem>
+                    <p className={styles['padding-input']}>Genre: {book.genre}</p>
+                  </IonItem>
+                  <IonItem>
+                    <p className={styles['padding-input']}>Date de parution: {book.parution}</p>
+                  </IonItem>
+                  <IonItem>
+                    <p className={styles['padding-input']}>Éditeur: {book.editeur}</p>
+                  </IonItem>
+                </div>
+
+                <IonItem>
+                    <p className={styles['padding-input']}>Description: <br/> <br/> {book.description}</p>
+                  </IonItem>
+              </>
+            )}
+          </div>
         </div>
       </IonContent>
+
     </IonPage>
   );
 };

@@ -17,7 +17,8 @@ export const books = [
     editeur: "Konti",
     prix: "9",
     genre: "Art, Culture & Société",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const books = [
     editeur: "Kounl",
     prix: "5",
     genre: "BD & Jeunesse",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
     id: 3,
@@ -37,7 +39,8 @@ export const books = [
     editeur: "Molkopo",
     genre: "Nature & Loisirs",
     prix: "6",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
     id: 4,
@@ -47,7 +50,8 @@ export const books = [
     editeur: "Anton",
     genre: "Nature & Loisirs",
     prix: "4",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
     id: 5,
@@ -57,7 +61,8 @@ export const books = [
     editeur: "Molkopo",
     genre: "Savoirs",
     prix: "12",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
     id: 6,
@@ -67,6 +72,7 @@ export const books = [
     editeur: "Anton",
     genre: "Scolaire & Universitaires",
     prix: "11",
-    image : "../../assets/img/1.jpeg"
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
 ];
