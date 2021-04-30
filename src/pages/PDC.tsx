@@ -1,5 +1,5 @@
 import { IonPage, IonContent, IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton } from '@ionic/react';
-import React, { useContext } from "react";
+import React from "react";
 
 const PDC: React.FC = () => {
 

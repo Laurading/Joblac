@@ -1,6 +1,5 @@
-import { IonButton, IonItem } from "@ionic/react";
-import React, { MouseEventHandler, useState } from "react";
-import styles from './TotalToPay.module.css'
+import { IonItem } from "@ionic/react";
+import React from "react";
 
 interface ContainerProps {
   total: number;

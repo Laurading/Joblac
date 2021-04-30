@@ -3,19 +3,15 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonCol,
-  IonRow,
   IonToolbar,
   IonLabel,
   IonInput,
-  IonButton,
   IonItem,
 } from "@ionic/react";
 import { Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
-import { setErrorHandler } from "ionicons/dist/types/stencil-public-runtime";
 
 const Login: React.FC = () => {
   const [dataLogin, setDataLogin] = useState({ email: "", password: "" });

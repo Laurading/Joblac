@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import styles from "./Book.module.css";
 import CartContext from "../../contexts/CartContext";
 import { useParams } from "react-router";
-import { IonContent, IonPage, IonItem, IonLabel, IonHeader, IonTitle, IonToolbar, IonCol, IonButtons, IonBackButton } from "@ionic/react";
+import { IonContent, IonPage, IonItem, IonHeader, IonTitle, IonToolbar, IonCol, IonButtons, IonBackButton } from "@ionic/react";
 import { books } from "../../data/data";
 
 const Book: React.FC = () => {
@@ -37,18 +37,20 @@ const Book: React.FC = () => {
   //const book = books.find((one: any) => one.id === parseInt(id, 10)) || "";
   return (
     <IonPage>
+
       <IonHeader>
         <IonToolbar>
+
           <IonTitle>
             <img src="././assets/img/Joblac.png" />
           </IonTitle>
+
           <IonButtons slot="start">
             <IonBackButton />
           </IonButtons>
+
         </IonToolbar>
       </IonHeader>
-
-
 
       <IonContent>
         <div className="background">
@@ -59,6 +61,7 @@ const Book: React.FC = () => {
                   <IonItem>
                     <p className={styles['title']}>{book.titre}</p>
                   </IonItem>
+
                   <IonItem>
                     <img className={styles['img']} src={book.image} />
                   </IonItem>
@@ -76,12 +79,15 @@ const Book: React.FC = () => {
                   <IonItem>
                     <p className={styles['padding-input']}>Auteur: {book.auteur}</p>
                   </IonItem>
+
                   <IonItem>
                     <p className={styles['padding-input']}>Genre: {book.genre}</p>
                   </IonItem>
+                  
                   <IonItem>
                     <p className={styles['padding-input']}>Date de parution: {book.parution}</p>
                   </IonItem>
+
                   <IonItem>
                     <p className={styles['padding-input']}>Éditeur: {book.editeur}</p>
                   </IonItem>

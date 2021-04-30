@@ -1,17 +1,14 @@
 import {
-  IonButton,
-  IonCol,
   IonContent,
   IonHeader,
   IonInput,
   IonItem,
   IonLabel,
   IonPage,
-  IonRow,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { Redirect, Route } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import ShowErrorForm from "../components/ShowErrorForm";

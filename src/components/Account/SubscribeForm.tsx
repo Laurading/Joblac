@@ -1,7 +1,7 @@
 import "./ExploreContainer.css";
 import React, { useState } from "react";
 
-interface ContainerProps {}
+interface ContainerProps { }
 
 const SubscribeForm: React.FC<ContainerProps> = () => {
   const [dataLogin, setDataLogin] = useState({
