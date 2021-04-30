@@ -35,7 +35,6 @@ const Cart: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonItem routerLink="/payementvalid">
         <div className="background">
           <p className={styles["title-tab-2"]}>PANIER</p>
           {booklist}
@@ -43,7 +42,6 @@ const Cart: React.FC = () => {
             <TotalToPay total={countTotal} />
           </div>
         </div>
-        </IonItem>
       </IonContent>
     </IonPage>
   );
