@@ -11,12 +11,12 @@ import React, { useContext, useEffect } from "react";
 import CartContext from "../contexts/CartContext";
 
 const CGD: React.FC = () => {
-  const { books, setBooks } = useContext(CartContext);
+  /*const { books, setBooks } = useContext(CartContext);
 
   useEffect(() => {
     setBooks([]);
   }, []);
-
+*/
   return (
     <IonPage>
       <IonHeader>

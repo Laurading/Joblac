@@ -12,7 +12,7 @@ const Books: React.FC = () => {
       return (
         <IonItem key={book.id} routerLink={`/book/${book.id}`}>
           <IonCol size="5">
-            <img className={styles['img']} src={book.image}></img>
+            <img className={styles["img"]} src={book.image}></img>
           </IonCol>
           <p className={styles["padding"]}>
             {book.titre} {book.auteur}
