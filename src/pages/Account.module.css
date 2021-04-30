@@ -1,0 +1,55 @@
+.orange {
+  background-color: #D78119;
+  width: 100%;
+}
+
+.title-tab-2 {
+  font-size: 12px;
+  color: #000;
+  padding: 15px 20px 20px 20px;
+  text-align: center;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.hyperlink {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
+.padding-input {
+  padding: 10px;
+}
+
+.error {
+  padding-bottom: 24px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.form {
+  padding-bottom: 20px;
+}
+
+
+.deconnexion {
+  color: #DE2525 !important;
+}
+
+.maj {
+  text-transform: uppercase;
+}
+
+.return {
+  font-size: 10px;
+  color: #000;
+  padding: 0px 20px 20px 20px;
+  text-align: center;
+}
+.color-black{
+  color: #000 !important;
+}

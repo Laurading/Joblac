@@ -1,0 +1,40 @@
+.orange {
+  background-color: #D78119;
+  width: 100%;
+}
+
+.title-tab-2 {
+  font-size: 12px;
+  color: #000;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.hyperlink {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.padding-input {
+  padding: 10px;
+}
+
+.error {
+  padding-bottom: 24px;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #DE2525;
+}
+
+.form {
+  padding-bottom: 5px;
+}
+
+.padding-content {
+  padding-top: 2px;
+}
