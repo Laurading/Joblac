@@ -55,7 +55,7 @@ export const books = [
   },
   {
     id: 5,
-    titre: "walabi",
+    titre: "Walabi",
     auteur: "outalouk malak off",
     parution: "17/11/2012",
     editeur: "Molkopo",
@@ -71,6 +71,28 @@ export const books = [
     parution: "26/04/2012",
     editeur: "Anton",
     genre: "Scolaire & Universitaires",
+    prix: "11",
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
+  },
+  {
+    id: 7,
+    titre: "Trucmuche",
+    auteur: "André La marmitte",
+    parution: "26/04/2012",
+    editeur: "Anton",
+    genre: "Littérature & Fiction",
+    prix: "11",
+    image : "../../assets/img/1.jpeg",
+    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
+  },
+  {
+    id: 8,
+    titre: "Banana",
+    auteur: "André La marmitte",
+    parution: "26/04/2012",
+    editeur: "Anton",
+    genre: "Vie Pratique",
     prix: "11",
     image : "../../assets/img/1.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."

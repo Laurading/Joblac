@@ -10,6 +10,7 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
+  IonItem,
 } from "@ionic/react";
 import styles from "./Home.module.css";
 
@@ -28,23 +29,30 @@ const Home: React.FC = () => {
           <IonGrid>
             <IonRow>
               <IonCol>
-                <img className={styles['img']} src="../../assets/img/1.jpeg"/>
+                <IonItem routerLink="/book/1">
+                  <p className={styles['orange']}>Grizzly</p>
+                  <img className={styles['img']} src="../../assets/img/1.jpeg"/></IonItem>
               </IonCol>
             </IonRow>
             <IonRow>
               <IonCol>
-              <img className={styles['img']} src="../../assets/img/1.jpeg"/>
+                <p className={styles['orange-xs']}>Gountami</p>
+                <br/>
+              <IonItem routerLink="/book/2"><img className={styles['img']} src="../../assets/img/1.jpeg"/></IonItem>
               </IonCol>
               <IonCol>
-              <img className={styles['img']} src="../../assets/img/1.jpeg"/>
+              <p className={styles['orange-xs']}>Malk</p>
+              <IonItem routerLink="/book/3"><img className={styles['img']} src="../../assets/img/1.jpeg"/></IonItem>
               </IonCol>
             </IonRow>
             <IonRow>
               <IonCol>
-              <img className={styles['img']} src="../../assets/img/1.jpeg"/>
+              <p className={styles['orange-xs']}>Hunkom</p>
+              <IonItem routerLink="/book/4"><img className={styles['img']} src="../../assets/img/1.jpeg"/></IonItem>
               </IonCol>
               <IonCol>
-              <img className={styles['img']} src="../../assets/img/1.jpeg"/>
+              <p className={styles['orange-xs']}>Walabi</p>
+              <IonItem routerLink="/book/5"><img className={styles['img']} src="../../assets/img/1.jpeg"/></IonItem>
               </IonCol>
             </IonRow>
           </IonGrid>

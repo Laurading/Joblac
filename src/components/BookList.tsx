@@ -20,6 +20,7 @@ const CategoriesContainer: React.FC<ContainerProps> = ({
         <IonItem onClick={handleClick} key={book.titre}>
           <IonLabel>
             {book.titre} - {book.auteur}
+            prout
           </IonLabel>
         </IonItem>
       );

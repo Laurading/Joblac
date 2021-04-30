@@ -35,4 +35,9 @@
     padding-left: 10px;
     font-size: 20px;
     font-weight: 300;
+    color: #d78119;
+}
+
+toolbar-container {
+  background-color: #F5F5F5 !important;
 }

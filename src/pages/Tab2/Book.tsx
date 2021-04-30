@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import styles from "./Book.module.css";
 import CartContext from "../../contexts/CartContext";
 import { useParams } from "react-router";
-import { IonContent, IonPage, IonItem, IonLabel, IonHeader, IonTitle, IonToolbar, IonCol } from "@ionic/react";
+import { IonContent, IonPage, IonItem, IonLabel, IonHeader, IonTitle, IonToolbar, IonCol, IonButtons, IonBackButton } from "@ionic/react";
 import { books } from "../../data/data";
 
 const Book: React.FC = () => {
@@ -42,8 +42,13 @@ const Book: React.FC = () => {
           <IonTitle>
             <img src="././assets/img/Joblac.png" />
           </IonTitle>
+          <IonButtons slot="start">
+            <IonBackButton />
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
+
+
 
       <IonContent>
         <div className="background">
@@ -51,18 +56,18 @@ const Book: React.FC = () => {
             {book.titre !== "" && (
               <>
                 <div className={styles['form']}>
-                <IonItem>
+                  <IonItem>
                     <p className={styles['title']}>{book.titre}</p>
                   </IonItem>
                   <IonItem>
                     <img className={styles['img']} src={book.image} />
                   </IonItem>
-                  
+
                   <IonItem>
                     <p className={styles['padding-input']}>Prix: {book.prix} €</p>
                   </IonItem>
 
-                  <IonItem>
+                  <IonItem routerLink="/cart">
                     <button className={styles['button']} onClick={addCart}>Ajouter au panier</button>
                   </IonItem>
                 </div>
@@ -83,8 +88,8 @@ const Book: React.FC = () => {
                 </div>
 
                 <IonItem>
-                    <p className={styles['padding-input']}>Description: <br/> <br/> {book.description}</p>
-                  </IonItem>
+                  <p className={styles['padding-input']}>Description: <br /> <br /> {book.description}</p>
+                </IonItem>
               </>
             )}
           </div>
