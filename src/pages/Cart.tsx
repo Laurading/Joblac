@@ -1,58 +1,47 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonItem,
-  IonLabel,
-  IonButton,
-} from "@ionic/react";
+import { IonContent, IonPage, IonItem, IonLabel, IonHeader, IonTitle, IonToolbar, IonCol } from "@ionic/react";
 import CartContext from "../contexts/CartContext";
-import styles from "./Tab3/Tab3.module.css";
+import styles from "./Cart.module.css";
 import React, { useContext, useState, useEffect } from "react";
-import "./Home.css";
+import TotalToPay from "../components/TotalToPay";
 
 const Cart: React.FC = () => {
   const { books, updateBooks } = useContext(CartContext);
-  const [total, setTotal] = useState(0);
-  console.log("panier", books);
+
+  let countTotal: number = 0;
   const booklist = books.map((book: any) => {
-    setTotal(total + parseFloat(book.prix));
-    console.log("one", book);
+    const price: number = Number(book.prix);
+    countTotal = countTotal + price;
+
     return (
       <IonItem key={book.titre}>
-        <IonLabel>
-          {book.titre} - {book.auteur}
-        </IonLabel>
-        <IonLabel>prix: {book.prix}</IonLabel>
+        <IonCol size="5">
+          <img className={styles['img']} src={book.image}></img>
+        </IonCol>
+        <p>
+          {book.titre} {book.auteur}
+          <p className={styles['price']}>Prix: {book.prix} €</p>
+        </p>
       </IonItem>
     );
   });
-  /*useEffect(() => {
-    booklist = books.map((book: any) => {
-      setTotal(total + parseFloat(book.prix));
-      console.log("one", book);
-      return (
-        <IonItem key={book.titre}>
-          <IonLabel>
-            {book.titre} - {book.auteur}
-          </IonLabel>
-          <IonLabel>prix: {book.prix}</IonLabel>
-        </IonItem>
-      );
-    });
-  }, [books]);*/
+
   return (
     <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>
+            <img src="././assets/img/Joblac.png" />
+          </IonTitle>
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
         <div className="background">
-          <div className={styles["orange"]}>
-            <p className={styles["title-tab-2"]}>PANIER</p>
+          <p className={styles["title-tab-2"]}>PANIER</p>
+          {booklist}
+          <div className={styles['pay']}>
+            <TotalToPay total={countTotal} />
           </div>
         </div>
-        {booklist}
-        <IonButton>Payer {total}€</IonButton>
       </IonContent>
     </IonPage>
   );

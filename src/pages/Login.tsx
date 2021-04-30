@@ -14,8 +14,8 @@ import {
 import { Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./Login.module.css";
 import { setErrorHandler } from "ionicons/dist/types/stencil-public-runtime";
-import styles from "./Login.module.css"
 
 const Login: React.FC = () => {
   const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
@@ -49,24 +49,41 @@ const Login: React.FC = () => {
     <>
       {redirect && <Redirect to="/account" />}
       <IonPage>
-        <div className="background">
-          <div className={styles['orange']}>
-            <p className={styles['title-tab-2']}>CONNEXION</p>
-          </div>
-          <IonContent>
-            <IonRow>
-              <IonCol size="12">
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>
+              <img src="././assets/img/Joblac.png" />
+            </IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent>
+          <div className="background">
+            <div>
+              <p className={styles["title-tab-2"]}>R E J O I G N E Z - N O U S !</p>
+            </div>
+            <div className={styles['padding-top']}>
+
+              <div className={styles['form']}>
+                <div className={styles['padding-content']}>
                 <IonItem>
-                  <IonLabel>Email:</IonLabel>
+                  <div className={styles['padding-input']}>
+                    <IonLabel>Email:</IonLabel>
+                  </div>
                   <IonInput
                     type="text"
                     name="email"
                     value={dataLogin.email}
                     onIonChange={handleChange}
                   />
+
                 </IonItem>
+                </div>
+                <div className={styles['padding-content']}>
                 <IonItem>
-                  <IonLabel>Mot de passe:</IonLabel>
+                  <div className={styles['padding-input']}>
+                    <IonLabel>Mot de passe:</IonLabel>
+                  </div>
                   <IonInput
                     type="password"
                     name="password"
@@ -74,18 +91,18 @@ const Login: React.FC = () => {
                     onIonChange={handleChange}
                   />
                 </IonItem>
-                {error !== "" && <p>{error}</p>}
-              </IonCol>
-              <IonCol size="12">
-                <IonButton type="submit" onClick={handleSubmit}>
-                  Se connecter
-                </IonButton>
-              </IonCol>
-            </IonRow>
-            <a href="/subscribe">Vous n'avez pas de compte ? Inscrivez vous</a>
-          </IonContent>
-        </div>
+                </div>
+              </div>
 
+              {error !== "" && <p className={styles['error']}>{error}</p>}
+
+              <button type="submit" onClick={handleSubmit} className={styles['button']}>Se connecter</button>
+
+            </div>
+            <a href="/subscribe" className={styles['hyperlink']}>Vous n'avez pas de compte ? Inscrivez vous</a>
+          </div>
+
+        </IonContent>
       </IonPage>
     </>
   );

@@ -10,13 +10,12 @@ import {
   IonRow,
   IonTitle,
   IonToolbar,
-  IonItemOption,
-  IonRouterOutlet,
 } from "@ionic/react";
 import { Redirect, Route } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import ShowErrorForm from "../components/ShowErrorForm";
+import styles from "./Subscribe.module.css";
 
 const Subscribe: React.FC = () => {
   const initialData = {
@@ -73,95 +72,105 @@ const Subscribe: React.FC = () => {
         <IonPage>
           <IonHeader>
             <IonToolbar>
-              <IonTitle>Inscription</IonTitle>
+              <IonTitle>
+                <img src="././assets/img/Joblac.png" />
+              </IonTitle>
             </IonToolbar>
           </IonHeader>
           <IonContent>
-            <IonRow>
-              <IonCol size="12">
-                <IonItem>
-                  <IonLabel>Email:</IonLabel>
-                  <IonInput
-                    value={dataLogin.email}
-                    type="text"
-                    name="email"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.email} />
+            <div className="background">
+              <div>
+                <p className={styles["title-tab-2"]}>I N S C R I V E Z - V O U S</p>
+              </div>
+              <div className={styles['padding-top']}>
+                <div className={styles['form']}>
+                  <div className={styles['padding-content']}>
 
-                <IonItem>
-                  <IonLabel>Nom utilisateur:</IonLabel>
-                  <IonInput
-                    value={dataLogin.username}
-                    type="text"
-                    name="username"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.username} />
+                    <IonItem>
+                      <div className={styles['padding-input']}>
+                        <IonLabel>Email:</IonLabel>
+                      </div>
+                      <IonInput value={dataLogin.email} type="text" name="email" onIonChange={handleChange} />
+                    </IonItem></div>
+                  <ShowErrorForm error={errorsSubscribe.email} />
 
-                <IonItem>
-                  <IonLabel>Mot de passe:</IonLabel>
-                  <IonInput
-                    type="password"
-                    name="password"
-                    value={dataLogin.password}
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.password} />
-                <IonItem>
-                  <IonLabel>Retapez votre mot de passe</IonLabel>
-                  <IonInput
-                    type="password"
-                    value={dataLogin.checkPassword}
-                    name="checkPassword"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.checkPassword} />
-                <IonItem>
-                  <IonLabel>adresse</IonLabel>
-                  <IonInput
-                    type="text"
-                    value={dataLogin.adress}
-                    name="adress"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.adress} />
+                  <div className={styles['padding-content']}>
+                    <IonItem>
+                      <div className={styles['padding-input']}>
+                        <IonLabel>Nom utilisateur:</IonLabel>
+                      </div>
+                      <IonInput value={dataLogin.username} type="text" name="username" onIonChange={handleChange}/>
+                    </IonItem>
+                    </div>
+                  <ShowErrorForm error={errorsSubscribe.username} />
 
-                <IonItem>
-                  <IonLabel>Code postal</IonLabel>
-                  <IonInput
-                    type="text"
-                    value={dataLogin.zipcode}
-                    name="zipcode"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
-                <ShowErrorForm error={errorsSubscribe.zipcode} />
+                  <div className={styles['padding-content']}>
+                    <IonItem>
+                    <div className={styles['padding-input']}>
+                      <IonLabel>Mot de passe:</IonLabel>
+                    </div>
+                    <IonInput type="password" name="password" value={dataLogin.password} onIonChange={handleChange}/>
+                  </IonItem></div>
+                  <ShowErrorForm error={errorsSubscribe.password} />
 
-                <IonItem>
-                  <IonLabel>ville</IonLabel>
-                  <IonInput
-                    type="text"
-                    value={dataLogin.city}
-                    name="city"
-                    onIonChange={handleChange}
-                  />
-                </IonItem>
+                  <div className={styles['padding-content']}><IonItem>
+                    <div className={styles['padding-input']}>
+                      <IonLabel>Retapez votre mot de passe</IonLabel>
+                    </div>
+                    <IonInput
+                      type="password"
+                      value={dataLogin.checkPassword}
+                      name="checkPassword"
+                      onIonChange={handleChange}
+                    />
+                  </IonItem></div>
+                  <ShowErrorForm error={errorsSubscribe.checkPassword} />
+                  <div className={styles['padding-content']}><IonItem>
+                    <div className={styles['padding-input']}>
+                      <IonLabel>Adresse</IonLabel>
+                    </div>
+                    <IonInput
+                      type="text"
+                      value={dataLogin.adress}
+                      name="adress"
+                      onIonChange={handleChange}
+                    />
+                  </IonItem></div>
+                  <ShowErrorForm error={errorsSubscribe.adress} />
+
+                  <div className={styles['padding-content']}><IonItem>
+                    <div className={styles['padding-input']}>
+                      <IonLabel>Code postal</IonLabel>
+                    </div>
+                    <IonInput
+                      type="text"
+                      value={dataLogin.zipcode}
+                      name="zipcode"
+                      onIonChange={handleChange}
+                    />
+                  </IonItem>
+                  </div>
+                  <ShowErrorForm error={errorsSubscribe.zipcode} />
+
+                  <div className={styles['padding-content']}>
+                    <IonItem>
+                      <div className={styles['padding-input']}>
+                        <IonLabel>Ville</IonLabel>
+                      </div>
+                      <IonInput type="text" value={dataLogin.city} name="city" onIonChange={handleChange} />
+                    </IonItem>
+                  </div>
+                </div>
                 <ShowErrorForm error={errorsSubscribe.city} />
-              </IonCol>
 
-              <IonCol size="12">
-                <IonButton type="submit" onClick={handleSubmit}>
+                <button type="submit" onClick={handleSubmit}>
                   S'inscrire
-                </IonButton>
-              </IonCol>
-            </IonRow>
-            <a href="/login">Vous avez deja un compte ? Connectez vous</a>
+                </button>
+
+                <a href="/login" className={styles['hyperlink']}>Vous avez deja un compte ? Connectez vous</a>
+              </div>
+            </div>
+
           </IonContent>
         </IonPage>
       )}

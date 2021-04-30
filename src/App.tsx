@@ -14,10 +14,8 @@ import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
-import Books from "./pages/Books";
 import Login from "./pages/Login";
 import Subscribe from "./pages/Subscribe";
-import Subcategories from "./pages/Subcategories";
 import "./App.css";
 
 /* Core CSS required for Ionic components to work properly */
@@ -41,6 +39,9 @@ import "./theme/variables.css";
 import CartContext from "./contexts/CartContext";
 import Tab2 from "./pages/Tab2/Tab2";
 import BookList from "./pages/Tab2/BookList";
+import CGD from "./pages/CGD";
+import CGR from "./pages/CGR";
+import PDC from "./pages/PDC";
 import Book from "./pages/Tab2/Book";
 
 const App: React.FC = () => {
@@ -50,7 +51,6 @@ const App: React.FC = () => {
     books,
     setBooks,
   };
-  console.log("les books", books);
 
   return (
     <CartContext.Provider value={cartContextValue}>
@@ -66,6 +66,9 @@ const App: React.FC = () => {
               <Route exact path="/login" component={Login} />
               <Route exact path="/subscribe" component={Subscribe} />
               <Route exact path="/booklist/:category" component={BookList} />
+              <Route exact path="/cgd" component={CGD} />
+              <Route exact path="/pdc" component={PDC} />
+              <Route exact path="/cgr" component={CGR} />
               <Route exact path="/">
                 <Redirect to="/home" />
               </Route>
@@ -89,6 +92,7 @@ const App: React.FC = () => {
                 <IonIcon src="./assets/svg/profil.svg" />
                 <IonLabel>Compte</IonLabel>
               </IonTabButton>
+              
             </IonTabBar>
           </IonTabs>
         </IonReactRouter>
