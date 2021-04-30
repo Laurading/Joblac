@@ -28,7 +28,7 @@ export const books = [
     editeur: "Kounl",
     prix: "5",
     genre: "BD & Jeunesse",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/2.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -39,7 +39,7 @@ export const books = [
     editeur: "Molkopo",
     genre: "Nature & Loisirs",
     prix: "6",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/3.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -50,7 +50,7 @@ export const books = [
     editeur: "Anton",
     genre: "Nature & Loisirs",
     prix: "4",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/4.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -61,7 +61,7 @@ export const books = [
     editeur: "Molkopo",
     genre: "Savoirs",
     prix: "12",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/5.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -72,7 +72,7 @@ export const books = [
     editeur: "Anton",
     genre: "Scolaire & Universitaires",
     prix: "11",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/6.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -83,7 +83,7 @@ export const books = [
     editeur: "Anton",
     genre: "Littérature & Fiction",
     prix: "11",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/7.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
   {
@@ -94,7 +94,7 @@ export const books = [
     editeur: "Anton",
     genre: "Vie Pratique",
     prix: "11",
-    image : "../../assets/img/1.jpeg",
+    image : "../../assets/img/8.jpeg",
     description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lorem nulla, sit amet sollicitudin tortor aliquet ac. Ut sit amet tincidunt risus. Proin vitae sapien mollis velit rhoncus porta non non ligula. Nullam maximus arcu enim, a ullamcorper felis rutrum nec. Nulla eros eros, elementum a varius sed, sagittis eu orci. Duis imperdiet mattis ante at eleifend. Donec lectus est, lacinia sit amet efficitur a, luctus nec nisl. Nunc vulputate pharetra velit sed laoreet."
   },
 ];
