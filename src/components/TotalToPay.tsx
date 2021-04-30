@@ -7,7 +7,7 @@ interface ContainerProps {
 }
 
 const ShowErrorForm: React.FC<ContainerProps> = ({ total }) => {
-  return <IonItem routerLink="/cart"><button>Payer {total} €</button></IonItem>;
+  return <IonItem routerLink="/payementvalid"><button>Payer {total} €</button></IonItem>;
 };
 
 export default ShowErrorForm;
