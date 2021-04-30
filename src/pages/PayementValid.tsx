@@ -1,8 +1,21 @@
-import { IonPage, IonContent, IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton } from '@ionic/react';
-import React, { useContext } from "react";
+import {
+  IonPage,
+  IonContent,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonBackButton,
+} from "@ionic/react";
+import React, { useContext, useEffect } from "react";
+import CartContext from "../contexts/CartContext";
 
 const CGD: React.FC = () => {
+  const { books, setBooks } = useContext(CartContext);
 
+  useEffect(() => {
+    setBooks([]);
+  }, []);
 
   return (
     <IonPage>
