@@ -43,6 +43,7 @@ import CGD from "./pages/CGD";
 import CGR from "./pages/CGR";
 import PDC from "./pages/PDC";
 import Book from "./pages/Tab2/Book";
+import PayementValid from "./pages/PayementValid";
 
 const App: React.FC = () => {
   const [books, setBooks] = useState([]);
@@ -69,6 +70,7 @@ const App: React.FC = () => {
               <Route exact path="/cgd" component={CGD} />
               <Route exact path="/pdc" component={PDC} />
               <Route exact path="/cgr" component={CGR} />
+              <Route exact path="/payementvalid" component={PayementValid} />
               <Route exact path="/">
                 <Redirect to="/home" />
               </Route>
