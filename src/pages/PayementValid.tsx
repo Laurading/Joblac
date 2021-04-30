@@ -6,17 +6,18 @@ import {
   IonTitle,
   IonButtons,
   IonBackButton,
+  useIonViewDidEnter,
 } from "@ionic/react";
 import React, { useContext, useEffect } from "react";
 import CartContext from "../contexts/CartContext";
 
 const CGD: React.FC = () => {
-  /*const { books, setBooks } = useContext(CartContext);
+  const { books, setBooks } = useContext(CartContext);
 
-  useEffect(() => {
+  useIonViewDidEnter(() => {
     setBooks([]);
-  }, []);
-*/
+  });
+
   return (
     <IonPage>
       <IonHeader>
